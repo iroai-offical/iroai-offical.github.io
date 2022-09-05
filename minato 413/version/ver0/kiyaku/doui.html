@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Materialize.css">
+</head>
+<body>
+  <iframe src="./kiyaku.html" frameborder="0" width="800" height="320"></iframe>
+    <form action="#">
+        <p>
+          <label>
+            <input type="checkbox" class="filled-in" id="check" onclick="checkValue(this)" subscribe="off">
+            <span>私は、iroaiキャラクター利用規約を読み、それに同意します。</span>
+          </label>
+          <br>
+          <a id="btn" disabled="disabled" class="btn-large">ダウンロード</a>
+          <script src="js/jquery-1.11.1.min.js"></script>
+          <script type="text/javascript">
+      
+             /* buttonのdisable属性を書き換える */
+             function checkValue(check){
+                 var btn = document.getElementById('btn');
+      
+                 if (check.checked) {
+                     btn.value = 'ダウンロード';
+                     btn.removeAttribute('disabled');
+                 } else {
+                     btn.value = 'ダウンロード';
+                     btn.setAttribute('disabled', 'disabled');
+                 }
+             }
+         </script>
+        </p>
+      </form>
+</body>
+</html>
